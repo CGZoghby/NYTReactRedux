@@ -1,9 +1,11 @@
 import React from "react";
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
     <a className="navbar-brand" href="/">
-      React Reading List
+      New York Times Article Party; 
+      <br/>
+      Search for and Annotate Articles!
     </a>
   </nav>
 );

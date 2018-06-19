@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search";
-import Results from "./pages/Results";
+import ResultList from "./pages/Search/ResultList";
 import Saved from "./pages/Saved";
 import Nav from "./components/Nav";
 
@@ -12,7 +12,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Search} />
         <Route exact path="/articles" component={Saved} />
-        <Route exact path="/search/results" component={Results} />
+        <Route exact path="/results" component={ResultList} />
         <Route component={Search} />
       </Switch>
     </div>

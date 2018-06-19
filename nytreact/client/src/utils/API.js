@@ -1,9 +1,20 @@
 import axios from "axios";
 
+//apikey is builtin
+const baseUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=51c234d9d2b943dd8f9a0561a5e8722c";
+
 export default {
+  //Scrape for articles 
+  searchArticles: function(query) {
+    return axios.get(baseUrl+query)
+  },
   // Gets all Articles
   getArticles: function() {
     return axios.get("/api/articles");
+  },
+  // Gets all articles saved to database
+  getSavedArticles: function() {
+    return axios.get("/api/articles/saved")
   },
   // Gets the Article with the given id
   getArticle: function(id) {

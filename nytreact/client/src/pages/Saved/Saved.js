@@ -27,13 +27,15 @@ class SavedArticles extends Component {
           </Col>
         </Row>
         <Row>
-          <List>
-            {this.state.savedArticles.map(article => (
-              <ListItem key={article.id}>
-                <a href={article.link}><strong>{article.title}</strong></a>
+        <List>
+          {this.state.savedArticles.map(article => {
+            return (
+              <ListItem key={article._id}>
+                <a href={article.web_url}>{article.headline.main}</a> Published On: {article.pub_date}
               </ListItem>
-            ))}
-          </List>
+            )
+          })}
+        </List>
         </Row>
       </Container>
     )

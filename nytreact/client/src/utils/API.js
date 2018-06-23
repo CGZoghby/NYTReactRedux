@@ -12,10 +12,6 @@ export default {
   getArticles: function() {
     return axios.get("/api/articles");
   },
-  // Gets all articles saved to database
-  getSavedArticles: function() {
-    return axios.get("/api/articles/saved")
-  },
   // Gets the Article with the given id
   getArticle: function(id) {
     return axios.get("/api/articles/" + id);
@@ -25,7 +21,7 @@ export default {
     return axios.delete("/api/articles/" + id);
   },
   // Saves an Article to the database
-  saveArticle: function(ArticleData) {
-    return axios.post("/api/articles", ArticleData);
+  saveArticle: function(articleData) {
+    return axios.post("/api/articles", articleData);
   }
 };

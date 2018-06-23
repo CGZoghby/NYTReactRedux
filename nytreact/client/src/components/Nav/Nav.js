@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
-    <a className="navbar-brand" href="/">
-      New York Times Article Party; 
-      <br/>
-      Search for and Annotate Articles!
-    </a>
+// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+const Navbar = props => (
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <Link className="navbar-brand" to="/">
+      NYTArticleSearch
+    </Link>
   </nav>
 );
 
-export default Nav;
+export default Navbar;
